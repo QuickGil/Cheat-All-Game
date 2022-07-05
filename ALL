@@ -1,0 +1,264 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local CheatMenu = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local AE = Instance.new("TextButton")
+local SA = Instance.new("TextButton")
+local AB = Instance.new("TextButton")
+local NR = Instance.new("TextButton")
+local IR = Instance.new("TextButton")
+local FGU = Instance.new("TextButton")
+local FB = Instance.new("TextButton")
+local PX = Instance.new("TextLabel")
+local CR = Instance.new("TextLabel")
+local CR_2 = Instance.new("TextLabel")
+
+--Properties:
+
+CheatMenu.Name = "CheatMenu"
+CheatMenu.Parent = game.CoreGui
+
+Frame.Parent = CheatMenu
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.847242951, 0, 0.241126075, 0)
+Frame.Size = UDim2.new(0, 94, 0, 501)
+Frame.Style = Enum.FrameStyle.RobloxRound
+
+AE.Name = "AE"
+AE.Parent = Frame
+AE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AE.Position = UDim2.new(0.055944059, 0, 0.190607727, 0)
+AE.Size = UDim2.new(0, 73, 0, 15)
+AE.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+AE.Font = Enum.Font.SourceSans
+AE.Text = "Animal ESP"
+AE.TextColor3 = Color3.fromRGB(0, 0, 0)
+AE.TextSize = 14.000
+
+SA.Name = "SA"
+SA.Parent = Frame
+SA.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SA.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SA.Position = UDim2.new(0.055944059, 0, 0.118784532, 0)
+SA.Size = UDim2.new(0, 73, 0, 15)
+SA.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+SA.Font = Enum.Font.SourceSans
+SA.Text = "Slient Aim"
+SA.TextColor3 = Color3.fromRGB(0, 0, 0)
+SA.TextSize = 14.000
+
+AB.Name = "AB"
+AB.Parent = Frame
+AB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+AB.Position = UDim2.new(0.055944059, 0, 0.403248459, 0)
+AB.Size = UDim2.new(0, 73, 0, 15)
+AB.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+AB.Font = Enum.Font.SourceSans
+AB.Text = "AimBot"
+AB.TextColor3 = Color3.fromRGB(0, 0, 0)
+AB.TextSize = 14.000
+
+NR.Name = "NR"
+NR.Parent = Frame
+NR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NR.Position = UDim2.new(0.055944059, 0, 0.334187686, 0)
+NR.Size = UDim2.new(0, 73, 0, 15)
+NR.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+NR.Font = Enum.Font.SourceSans
+NR.Text = "No Recoil"
+NR.TextColor3 = Color3.fromRGB(0, 0, 0)
+NR.TextSize = 14.000
+
+IR.Name = "IR"
+IR.Parent = Frame
+IR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IR.Position = UDim2.new(0.055944059, 0, 0.267215371, 0)
+IR.Size = UDim2.new(0, 73, 0, 15)
+IR.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+IR.Font = Enum.Font.SourceSans
+IR.Text = "Instant R"
+IR.TextColor3 = Color3.fromRGB(0, 0, 0)
+IR.TextSize = 14.000
+
+FGU.Name = "FGU"
+FGU.Parent = Frame
+FGU.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FGU.Position = UDim2.new(0.055944059, 0, 0.477900565, 0)
+FGU.Size = UDim2.new(0, 73, 0, 15)
+FGU.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+FGU.Font = Enum.Font.SourceSans
+FGU.Text = "FreeGetUp"
+FGU.TextColor3 = Color3.fromRGB(0, 0, 0)
+FGU.TextSize = 14.000
+
+FB.Name = "FB"
+FB.Parent = Frame
+FB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FB.Position = UDim2.new(0.055944059, 0, 0.54738915, 0)
+FB.Size = UDim2.new(0, 73, 0, 15)
+FB.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+FB.Font = Enum.Font.SourceSans
+FB.Text = "Fullbright"
+FB.TextColor3 = Color3.fromRGB(0, 0, 0)
+FB.TextSize = 14.000
+
+PX.Name = "PX"
+PX.Parent = Frame
+PX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PX.BackgroundTransparency = 100.000
+PX.BorderColor3 = Color3.fromRGB(90, 142, 233)
+PX.Position = UDim2.new(0.0679035783, 0, -0.00244222768, 0)
+PX.Size = UDim2.new(0, 65, 0, 50)
+PX.Font = Enum.Font.PatrickHand
+PX.Text = "PX"
+PX.TextColor3 = Color3.fromRGB(90, 142, 233)
+PX.TextScaled = true
+PX.TextSize = 14.000
+PX.TextWrapped = true
+
+CR.Name = "CR"
+CR.Parent = Frame
+CR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CR.BackgroundTransparency = 100.000
+CR.Position = UDim2.new(0.0427791514, 0, 0.641893923, 0)
+CR.Size = UDim2.new(0, 71, 0, 50)
+CR.Font = Enum.Font.SourceSans
+CR.Text = "Credits"
+CR.TextColor3 = Color3.fromRGB(90, 142, 233)
+CR.TextSize = 14.000
+
+CR_2.Name = "CR"
+CR_2.Parent = Frame
+CR_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CR_2.BackgroundTransparency = 100.000
+CR_2.Position = UDim2.new(0.053417448, 0, 0.687802076, 0)
+CR_2.Size = UDim2.new(0, 71, 0, 50)
+CR_2.Font = Enum.Font.SourceSans
+CR_2.Text = "QuickGill"
+CR_2.TextColor3 = Color3.fromRGB(90, 142, 233)
+CR_2.TextSize = 14.000
+
+-- Scripts:
+
+local function IJMXZN_fake_script() -- SA.LocalScript 
+	local script = Instance.new('LocalScript', SA)
+
+	_G.silentaim = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.silentaim == false then
+			_G.silentaim = true
+			script.Parent.Text = "On"
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+		else
+			_G.silentaim = false
+			script.Parent.Text = "Slient Aim"
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+		end
+	end)
+	
+	local function ClosestPlayerToMouse()
+		local target = nil
+		local dist = math.huge
+		for i,v in pairs(players:GetPlayers()) do
+			if v.Name ~= plr.Name then
+				if v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") and _G.silentaim then
+					local screenpoint = camera:WorldToScreenPoint(v.Character.HumanoidRootPart.Position)
+					local check = (Vector2.new(mouse.X,mouse.Y)-Vector2.new(screenpoint.X,screenpoint.Y)).magnitude
+	
+					if check < dist then
+						target  = v
+						dist = check
+					end
+				end
+			end
+		end
+	
+		return target 
+	end
+	
+	local mt = getrawmetatable(game)
+	local namecall = mt.__namecall
+	setreadonly(mt,false)
+	
+	mt.__namecall = function(self,...)
+		local args = {...}
+		local method = getnamecallmethod()
+	
+		if tostring(self) == "HitPart" and method == "FireServer" then
+			print("so?")
+			args[1] = ClosestPlayerToMouse().Character.Head
+			args[2] = ClosestPlayerToMouse().Character.Head.Position
+			return self.FireServer(self, unpack(args))
+		end
+		return namecall(self,...)
+	end
+	
+end
+coroutine.wrap(IJMXZN_fake_script)()
+local function MOAE_fake_script() -- AB.LocalScript 
+	local script = Instance.new('LocalScript', AB)
+
+	_G.aimbot = false
+	local camera = game.Workspace.CurrentCamera
+	local localplayer = game:GetService("Players").LocalPlayer
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.aimbot == false then
+			_G.aimbot = true
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+			script.Parent.Text = "On"
+			function closestplayer()
+				local dist = math.huge 
+				local target = nil
+				for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+					if v ~= localplayer then
+						if v.Character and v.Character:FindFirstChild("Head") and _G.aimbot and v.Character.Humanoid.Health > 0 then --- creating the checks
+							local magnitude = (v.Character.Head.Position - localplayer.Character.Head.Position).magnitude
+							if magnitude < dist then
+								dist = magnitude
+								target = v
+							end
+	
+						end
+					end
+				end
+				return target
+			end
+	
+		else
+			_G.aimbot = false
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+			script.Parent.Text = "Off"
+		end
+	end)
+	
+	local settings = {
+		keybind = Enum.UserInputType.MouseButton2
+	}
+	
+	local UIS = game:GetService("UserInputService")
+	local aiming = false 
+	
+	UIS.InputBegan:Connect(function(inp)
+		if inp.UserInputType == settings.keybind then
+			aiming = true
+		end
+	end)
+	
+	UIS.InputEnded:Connect(function(inp)
+		if inp.UserInputType == settings.keybind then
+			aiming = false
+		end
+	end)
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		if aiming then
+			camera.CFrame = CFrame.new(camera.CFrame.Position,closestplayer().Character.Head.Position) 
+		end
+	end)
+end
+coroutine.wrap(MOAE_fake_script)()
