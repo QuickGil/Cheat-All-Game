@@ -232,7 +232,7 @@ local function MOAE_fake_script() -- AB.LocalScript
 		else
 			_G.aimbot = false
 			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
-			script.Parent.Text = "Off"
+			script.Parent.Text = "AimBot"
 		end
 	end)
 	
