@@ -189,7 +189,7 @@ local function HVLFES_fake_script() -- AE.LocalScript
 			end
 		else 
 			_G.chams = false
-			script.Parent.Text = "Off"
+			script.Parent.Text = "Wallhack"
 			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
 		end
 	end)
