@@ -34,7 +34,7 @@ AE.Position = UDim2.new(0.055944059, 0, 0.190607727, 0)
 AE.Size = UDim2.new(0, 73, 0, 15)
 AE.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
 AE.Font = Enum.Font.SourceSans
-AE.Text = "Animal ESP"
+AE.Text = "Wallhack"
 AE.TextColor3 = Color3.fromRGB(0, 0, 0)
 AE.TextSize = 14.000
 
@@ -144,7 +144,59 @@ CR_2.TextSize = 14.000
 
 -- Scripts:
 
-local function IJMXZN_fake_script() -- SA.LocalScript 
+local function HVLFES_fake_script() -- AE.LocalScript 
+	local script = Instance.new('LocalScript', AE)
+
+	_G.chams = false
+	local Players = game:GetService("Players") -- variable to get the players in the game
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.chams == false then
+			_G.chams = true
+			script.Parent.Text = "On"
+			script.Parent.TextColor3 = Color3.fromRGB(0, 255, 0)
+			--- Chams
+			function CreateGui(name,parent,face) -- function that creates the Chams
+				local SurfaceGui = Instance.new("SurfaceGui",parent) --- Creates a SurfaceGui in the game
+				SurfaceGui.Parent = parent
+				SurfaceGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+				SurfaceGui.Face = Enum.NormalId[face]
+				SurfaceGui.LightInfluence = 0
+				SurfaceGui.ResetOnSpawn = false
+				SurfaceGui.Name = name
+				SurfaceGui.AlwaysOnTop = true
+				local Frame = Instance.new("Frame",SurfaceGui)
+				Frame.BackgroundColor3 = Color3.fromRGB(85, 170, 255) -- colour for the surfacgui
+				Frame.Size = UDim2.new(1,0,1,0)
+			end
+	
+			while wait(1) do
+				for i,v in pairs (Players:GetPlayers()) do --- gets all the players in the game and loops through them
+					if v ~= Players.LocalPlayer and v.Character ~= nil and v.Character:FindFirstChild("Head") and _G.chams and v.Character.Head:FindFirstChild("cham") == nil then --- Checks to check if the player is appropiate to make a cham
+						for i,v in pairs (v.Character:GetChildren()) do -- looping through every child in the character of the player
+							if v:IsA("MeshPart") or v.Name == "Head" then -- checking if the child is a body part
+								CreateGui("cham",v,"Back")
+								CreateGui("cham",v,"Front")
+								CreateGui("cham",v,"Top")
+								CreateGui("cham",v,"Bottom")
+								CreateGui("cham",v,"Right")
+								CreateGui("cham",v,"Left")
+							end
+						end
+	
+					end
+				end
+			end
+		else 
+			_G.chams = false
+			script.Parent.Text = "Off"
+			script.Parent.TextColor3 = Color3.fromRGB(255, 0, 0)
+		end
+	end)
+	
+end
+coroutine.wrap(HVLFES_fake_script)()
+local function OFOJ_fake_script() -- SA.LocalScript 
 	local script = Instance.new('LocalScript', SA)
 
 	_G.silentaim = false
@@ -198,8 +250,8 @@ local function IJMXZN_fake_script() -- SA.LocalScript
 	end
 	
 end
-coroutine.wrap(IJMXZN_fake_script)()
-local function MOAE_fake_script() -- AB.LocalScript 
+coroutine.wrap(OFOJ_fake_script)()
+local function QJHB_fake_script() -- AB.LocalScript 
 	local script = Instance.new('LocalScript', AB)
 
 	_G.aimbot = false
@@ -232,7 +284,7 @@ local function MOAE_fake_script() -- AB.LocalScript
 		else
 			_G.aimbot = false
 			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
-			script.Parent.Text = "AimBot"
+			script.Parent.Text = "Off"
 		end
 	end)
 	
@@ -261,4 +313,4 @@ local function MOAE_fake_script() -- AB.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MOAE_fake_script)()
+coroutine.wrap(QJHB_fake_script)()
