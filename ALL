@@ -154,7 +154,7 @@ local function HVLFES_fake_script() -- AE.LocalScript
 		if _G.chams == false then
 			_G.chams = true
 			script.Parent.Text = "On"
-			script.Parent.TextColor3 = Color3.fromRGB(0, 255, 0)
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
 			--- Chams
 			function CreateGui(name,parent,face) -- function that creates the Chams
 				local SurfaceGui = Instance.new("SurfaceGui",parent) --- Creates a SurfaceGui in the game
@@ -190,7 +190,7 @@ local function HVLFES_fake_script() -- AE.LocalScript
 		else 
 			_G.chams = false
 			script.Parent.Text = "Off"
-			script.Parent.TextColor3 = Color3.fromRGB(255, 0, 0)
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
 		end
 	end)
 	
