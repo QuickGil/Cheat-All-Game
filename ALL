@@ -15,6 +15,7 @@ local FB = Instance.new("TextButton")
 local PX = Instance.new("TextLabel")
 local CR = Instance.new("TextLabel")
 local CR_2 = Instance.new("TextLabel")
+local MiniMis = Instance.new("TextButton")
 
 --Properties:
 
@@ -30,11 +31,12 @@ Frame.Style = Enum.FrameStyle.RobloxRound
 AE.Name = "AE"
 AE.Parent = Frame
 AE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AE.BorderColor3 = Color3.fromRGB(27, 42, 53)
 AE.Position = UDim2.new(0.055944059, 0, 0.190607727, 0)
 AE.Size = UDim2.new(0, 73, 0, 15)
 AE.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
 AE.Font = Enum.Font.SourceSans
-AE.Text = "Wallhack"
+AE.Text = "PlayerESP"
 AE.TextColor3 = Color3.fromRGB(0, 0, 0)
 AE.TextSize = 14.000
 
@@ -91,18 +93,19 @@ FGU.Position = UDim2.new(0.055944059, 0, 0.477900565, 0)
 FGU.Size = UDim2.new(0, 73, 0, 15)
 FGU.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
 FGU.Font = Enum.Font.SourceSans
-FGU.Text = "FreeGetUp"
+FGU.Text = "FullBright"
 FGU.TextColor3 = Color3.fromRGB(0, 0, 0)
 FGU.TextSize = 14.000
 
 FB.Name = "FB"
 FB.Parent = Frame
 FB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FB.BorderColor3 = Color3.fromRGB(27, 42, 53)
 FB.Position = UDim2.new(0.055944059, 0, 0.54738915, 0)
 FB.Size = UDim2.new(0, 73, 0, 15)
 FB.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
 FB.Font = Enum.Font.SourceSans
-FB.Text = "Fullbright"
+FB.Text = "TrigerBot"
 FB.TextColor3 = Color3.fromRGB(0, 0, 0)
 FB.TextSize = 14.000
 
@@ -142,9 +145,20 @@ CR_2.Text = "QuickGill"
 CR_2.TextColor3 = Color3.fromRGB(90, 142, 233)
 CR_2.TextSize = 14.000
 
+MiniMis.Name = "MiniMis"
+MiniMis.Parent = CheatMenu
+MiniMis.BackgroundColor3 = Color3.fromRGB(90, 142, 233)
+MiniMis.BorderColor3 = Color3.fromRGB(90, 142, 233)
+MiniMis.Position = UDim2.new(-0.000745125115, 0, 0.508345842, 0)
+MiniMis.Size = UDim2.new(0, 30, 0, 21)
+MiniMis.Font = Enum.Font.TitilliumWeb
+MiniMis.Text = "mini"
+MiniMis.TextColor3 = Color3.fromRGB(0, 0, 0)
+MiniMis.TextSize = 14.000
+
 -- Scripts:
 
-local function HVLFES_fake_script() -- AE.LocalScript 
+local function BCECPG_fake_script() -- AE.LocalScript 
 	local script = Instance.new('LocalScript', AE)
 
 	_G.chams = false
@@ -155,48 +169,17 @@ local function HVLFES_fake_script() -- AE.LocalScript
 			_G.chams = true
 			script.Parent.Text = "On"
 			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
-			--- Chams
-			function CreateGui(name,parent,face) -- function that creates the Chams
-				local SurfaceGui = Instance.new("SurfaceGui",parent) --- Creates a SurfaceGui in the game
-				SurfaceGui.Parent = parent
-				SurfaceGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-				SurfaceGui.Face = Enum.NormalId[face]
-				SurfaceGui.LightInfluence = 0
-				SurfaceGui.ResetOnSpawn = false
-				SurfaceGui.Name = name
-				SurfaceGui.AlwaysOnTop = true
-				local Frame = Instance.new("Frame",SurfaceGui)
-				Frame.BackgroundColor3 = Color3.fromRGB(85, 170, 255) -- colour for the surfacgui
-				Frame.Size = UDim2.new(1,0,1,0)
-			end
-	
-			while wait(1) do
-				for i,v in pairs (Players:GetPlayers()) do --- gets all the players in the game and loops through them
-					if v ~= Players.LocalPlayer and v.Character ~= nil and v.Character:FindFirstChild("Head") and _G.chams and v.Character.Head:FindFirstChild("cham") == nil then --- Checks to check if the player is appropiate to make a cham
-						for i,v in pairs (v.Character:GetChildren()) do -- looping through every child in the character of the player
-							if v:IsA("MeshPart") or v.Name == "Head" then -- checking if the child is a body part
-								CreateGui("cham",v,"Back")
-								CreateGui("cham",v,"Front")
-								CreateGui("cham",v,"Top")
-								CreateGui("cham",v,"Bottom")
-								CreateGui("cham",v,"Right")
-								CreateGui("cham",v,"Left")
-							end
-						end
-	
-					end
-				end
-			end
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/QuickGil/Player-ESP/main/ESP'))()
 		else 
 			_G.chams = false
-			script.Parent.Text = "Wallhack"
+			script.Parent.Text = "PlayerESP"
 			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
 		end
 	end)
 	
 end
-coroutine.wrap(HVLFES_fake_script)()
-local function OFOJ_fake_script() -- SA.LocalScript 
+coroutine.wrap(BCECPG_fake_script)()
+local function AIQB_fake_script() -- SA.LocalScript 
 	local script = Instance.new('LocalScript', SA)
 
 	_G.silentaim = false
@@ -250,8 +233,8 @@ local function OFOJ_fake_script() -- SA.LocalScript
 	end
 	
 end
-coroutine.wrap(OFOJ_fake_script)()
-local function QJHB_fake_script() -- AB.LocalScript 
+coroutine.wrap(AIQB_fake_script)()
+local function VXHQXJ_fake_script() -- AB.LocalScript 
 	local script = Instance.new('LocalScript', AB)
 
 	_G.aimbot = false
@@ -313,4 +296,76 @@ local function QJHB_fake_script() -- AB.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QJHB_fake_script)()
+coroutine.wrap(VXHQXJ_fake_script)()
+local function NFBX_fake_script() -- IR.LocalScript 
+	local script = Instance.new('LocalScript', IR)
+
+	
+end
+coroutine.wrap(NFBX_fake_script)()
+local function EUKYYPA_fake_script() -- FGU.LocalScript 
+	local script = Instance.new('LocalScript', FGU)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.chams == false then
+			_G.chams = true
+			script.Parent.Text = "On"
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+			game:GetService("Lighting").Ambient = Color3.new(1, 1, 1)
+			game:GetService("Lighting").ColorShift_Bottom = Color3.new(1, 1, 1)
+			game:GetService("Lighting").ColorShift_Top = Color3.new(1, 1, 1)
+			
+		else 
+			_G.chams = false
+			script.Parent.Text = "FullBright"
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+			game:GetService("Lighting").Ambient = Color3.new(0, 0, 0)
+			game:GetService("Lighting").ColorShift_Bottom = Color3.new(0, 0, 0)
+			game:GetService("Lighting").ColorShift_Top = Color3.new(0, 0, 0)
+		end
+	end)
+end
+coroutine.wrap(EUKYYPA_fake_script)()
+local function IZJAQQ_fake_script() -- FB.fb 
+	local script = Instance.new('LocalScript', FB)
+
+	_G.triggerbot = false
+	local player = game:GetService("Players").LocalPlayer
+	local mouse = player:GetMouse()
+	script.Parent.MouseButton1Click:Connect(function()
+		if _G.triggerbot then
+			_G.triggerbot = false
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+			script.Parent.Text = "TriggerBot"
+		else
+			_G.triggerbot = true
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+			script.Parent.Text = "On"
+			game:GetService("RunService").RenderStepped:Connect(function()
+				if mouse.Target.Parent:FindFirstChild("Humanoid") and _G.triggerbot and mouse.Target.Parent.Name ~= player.Name then
+					mouse1press() wait() mouse1release()
+				end
+			end)
+		end
+	end)
+	
+end
+coroutine.wrap(IZJAQQ_fake_script)()
+local function LWUH_fake_script() -- MiniMis.LocalScript 
+	local script = Instance.new('LocalScript', MiniMis)
+
+	local frame = script.Parent.Parent.Frame
+	local open = false
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+		script.Parent.Text = "mini"
+		if frame.Visible == false then
+			frame.Visible = true
+		else
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+			script.Parent.Text = "Open"
+			frame.Visible = false
+		end
+	end)
+end
+coroutine.wrap(LWUH_fake_script)()
