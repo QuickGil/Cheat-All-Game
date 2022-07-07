@@ -12,10 +12,17 @@ local NR = Instance.new("TextButton")
 local IR = Instance.new("TextButton")
 local FGU = Instance.new("TextButton")
 local FB = Instance.new("TextButton")
-local PX = Instance.new("TextLabel")
 local CR = Instance.new("TextLabel")
 local CR_2 = Instance.new("TextLabel")
+local PX = Instance.new("TextLabel")
 local MiniMis = Instance.new("TextButton")
+local Frame2 = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local visit = Instance.new("TextButton")
 
 --Properties:
 
@@ -26,6 +33,7 @@ Frame.Parent = CheatMenu
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.Position = UDim2.new(0.847242951, 0, 0.241126075, 0)
 Frame.Size = UDim2.new(0, 94, 0, 501)
+Frame.Visible = false
 Frame.Style = Enum.FrameStyle.RobloxRound
 
 AE.Name = "AE"
@@ -109,20 +117,6 @@ FB.Text = "TrigerBot"
 FB.TextColor3 = Color3.fromRGB(0, 0, 0)
 FB.TextSize = 14.000
 
-PX.Name = "PX"
-PX.Parent = Frame
-PX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PX.BackgroundTransparency = 100.000
-PX.BorderColor3 = Color3.fromRGB(90, 142, 233)
-PX.Position = UDim2.new(0.0679035783, 0, -0.00244222768, 0)
-PX.Size = UDim2.new(0, 65, 0, 50)
-PX.Font = Enum.Font.PatrickHand
-PX.Text = "PX"
-PX.TextColor3 = Color3.fromRGB(90, 142, 233)
-PX.TextScaled = true
-PX.TextSize = 14.000
-PX.TextWrapped = true
-
 CR.Name = "CR"
 CR.Parent = Frame
 CR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -145,6 +139,20 @@ CR_2.Text = "QuickGill"
 CR_2.TextColor3 = Color3.fromRGB(90, 142, 233)
 CR_2.TextSize = 14.000
 
+PX.Name = "PX"
+PX.Parent = Frame
+PX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PX.BackgroundTransparency = 100.000
+PX.BorderColor3 = Color3.fromRGB(90, 142, 233)
+PX.Position = UDim2.new(0.0679035783, 0, -0.00244222768, 0)
+PX.Size = UDim2.new(0, 65, 0, 50)
+PX.Font = Enum.Font.PatrickHand
+PX.Text = "PX"
+PX.TextColor3 = Color3.fromRGB(90, 142, 233)
+PX.TextScaled = true
+PX.TextSize = 14.000
+PX.TextWrapped = true
+
 MiniMis.Name = "MiniMis"
 MiniMis.Parent = CheatMenu
 MiniMis.BackgroundColor3 = Color3.fromRGB(90, 142, 233)
@@ -152,13 +160,84 @@ MiniMis.BorderColor3 = Color3.fromRGB(90, 142, 233)
 MiniMis.Position = UDim2.new(-0.000745125115, 0, 0.508345842, 0)
 MiniMis.Size = UDim2.new(0, 30, 0, 21)
 MiniMis.Font = Enum.Font.TitilliumWeb
-MiniMis.Text = "mini"
+MiniMis.Text = "menu"
 MiniMis.TextColor3 = Color3.fromRGB(0, 0, 0)
 MiniMis.TextSize = 14.000
 
+Frame2.Name = "Frame2"
+Frame2.Parent = CheatMenu
+Frame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame2.Position = UDim2.new(0.246646807, 0, 0.298780501, 0)
+Frame2.Size = UDim2.new(0, 709, 0, 345)
+Frame2.Visible = false
+Frame2.Style = Enum.FrameStyle.RobloxRound
+
+ImageLabel.Parent = Frame2
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 200.000
+ImageLabel.Position = UDim2.new(0.034576457, 0, 0.155434787, 0)
+ImageLabel.Size = UDim2.new(0, 252, 0, 232)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=10135857800"
+
+TextLabel.Parent = Frame2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 100.010
+TextLabel.Position = UDim2.new(0.42804274, 0, 0.193709403, 0)
+TextLabel.Size = UDim2.new(0, 315, 0, 109)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "PsychoXPloit"
+TextLabel.TextColor3 = Color3.fromRGB(90, 142, 233)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 52.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 100.010
+TextLabel_2.Position = UDim2.new(0.42804274, 0, 0.298386484, 0)
+TextLabel_2.Size = UDim2.new(0, 315, 0, 109)
+TextLabel_2.Font = Enum.Font.SciFi
+TextLabel_2.Text = "We just Psycho"
+TextLabel_2.TextColor3 = Color3.fromRGB(90, 142, 233)
+TextLabel_2.TextSize = 20.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 100.010
+TextLabel_3.Position = UDim2.new(0.42804274, 0, 0.374110311, 0)
+TextLabel_3.Size = UDim2.new(0, 315, 0, 109)
+TextLabel_3.Font = Enum.Font.SciFi
+TextLabel_3.Text = "Cheat By Agil"
+TextLabel_3.TextColor3 = Color3.fromRGB(90, 142, 233)
+TextLabel_3.TextSize = 20.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = Frame2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 100.010
+TextLabel_4.Position = UDim2.new(0.423811436, 0, 0.48135668, 0)
+TextLabel_4.Size = UDim2.new(0, 315, 0, 109)
+TextLabel_4.Font = Enum.Font.SciFi
+TextLabel_4.Text = "github.com/QuickGil"
+TextLabel_4.TextColor3 = Color3.fromRGB(90, 142, 233)
+TextLabel_4.TextSize = 20.000
+TextLabel_4.TextWrapped = true
+
+visit.Name = "visit"
+visit.Parent = CheatMenu
+visit.BackgroundColor3 = Color3.fromRGB(90, 142, 233)
+visit.BorderColor3 = Color3.fromRGB(90, 142, 233)
+visit.Position = UDim2.new(-0.000745125115, 0, 0.465662926, 0)
+visit.Size = UDim2.new(0, 30, 0, 21)
+visit.Font = Enum.Font.TitilliumWeb
+visit.Text = "About"
+visit.TextColor3 = Color3.fromRGB(0, 0, 0)
+visit.TextSize = 14.000
+
 -- Scripts:
 
-local function BCECPG_fake_script() -- AE.LocalScript 
+local function EJOGIC_fake_script() -- AE.LocalScript 
 	local script = Instance.new('LocalScript', AE)
 
 	_G.chams = false
@@ -178,8 +257,8 @@ local function BCECPG_fake_script() -- AE.LocalScript
 	end)
 	
 end
-coroutine.wrap(BCECPG_fake_script)()
-local function AIQB_fake_script() -- SA.LocalScript 
+coroutine.wrap(EJOGIC_fake_script)()
+local function IEKPZJ_fake_script() -- SA.LocalScript 
 	local script = Instance.new('LocalScript', SA)
 
 	_G.silentaim = false
@@ -233,8 +312,8 @@ local function AIQB_fake_script() -- SA.LocalScript
 	end
 	
 end
-coroutine.wrap(AIQB_fake_script)()
-local function VXHQXJ_fake_script() -- AB.LocalScript 
+coroutine.wrap(IEKPZJ_fake_script)()
+local function NDLQO_fake_script() -- AB.LocalScript 
 	local script = Instance.new('LocalScript', AB)
 
 	_G.aimbot = false
@@ -296,14 +375,14 @@ local function VXHQXJ_fake_script() -- AB.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VXHQXJ_fake_script)()
-local function NFBX_fake_script() -- IR.LocalScript 
+coroutine.wrap(NDLQO_fake_script)()
+local function TOOQHGY_fake_script() -- IR.LocalScript 
 	local script = Instance.new('LocalScript', IR)
 
 	
 end
-coroutine.wrap(NFBX_fake_script)()
-local function EUKYYPA_fake_script() -- FGU.LocalScript 
+coroutine.wrap(TOOQHGY_fake_script)()
+local function YPVHL_fake_script() -- FGU.LocalScript 
 	local script = Instance.new('LocalScript', FGU)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -325,8 +404,8 @@ local function EUKYYPA_fake_script() -- FGU.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EUKYYPA_fake_script)()
-local function IZJAQQ_fake_script() -- FB.fb 
+coroutine.wrap(YPVHL_fake_script)()
+local function AFVKT_fake_script() -- FB.fb 
 	local script = Instance.new('LocalScript', FB)
 
 	_G.triggerbot = false
@@ -350,22 +429,40 @@ local function IZJAQQ_fake_script() -- FB.fb
 	end)
 	
 end
-coroutine.wrap(IZJAQQ_fake_script)()
-local function LWUH_fake_script() -- MiniMis.LocalScript 
+coroutine.wrap(AFVKT_fake_script)()
+local function JXHMQL_fake_script() -- MiniMis.LocalScript 
 	local script = Instance.new('LocalScript', MiniMis)
 
 	local frame = script.Parent.Parent.Frame
 	local open = false
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
-		script.Parent.Text = "mini"
+		script.Parent.Text = "menu"
 		if frame.Visible == false then
 			frame.Visible = true
 		else
 			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
-			script.Parent.Text = "Open"
+			script.Parent.Text = "menu"
 			frame.Visible = false
 		end
 	end)
 end
-coroutine.wrap(LWUH_fake_script)()
+coroutine.wrap(JXHMQL_fake_script)()
+local function YLPVB_fake_script() -- visit.LocalScript 
+	local script = Instance.new('LocalScript', visit)
+
+	local frame2 = script.Parent.Parent.Frame2
+	local open = false
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+		script.Parent.Text = "About"
+		if frame2.Visible == false then
+			frame2.Visible = true
+		else
+			script.Parent.TextColor3 = Color3.fromRGB(27, 42, 53)
+			script.Parent.Text = "About"
+			frame2.Visible = false
+		end
+	end)
+end
+coroutine.wrap(YLPVB_fake_script)()
